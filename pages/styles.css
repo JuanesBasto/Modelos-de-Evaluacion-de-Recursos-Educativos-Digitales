@@ -20,6 +20,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos más pequeños */
 }
 
 nav ul li {
@@ -57,4 +58,48 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #f06292; /* Rosa fuerte para el pie de página */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column; /* Cambiar la barra de navegación a columna */
+    }
+
+    .container {
+        padding: 1.5rem; /* Reducir el padding para pantallas más pequeñas */
+        margin: 1rem; /* Ajustar márgenes */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajustar el tamaño de los títulos */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Asegurar que la barra de navegación sea vertical */
+        padding-left: 0; /* Eliminar el padding para el ajuste */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Espaciado entre los enlaces */
+    }
+
+    .container {
+        padding: 1rem; /* Reducir el padding en dispositivos pequeños */
+        margin: 1rem; /* Ajustar márgenes */
+        max-width: 100%; /* Asegurar que el contenido no se desborde */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reducir el tamaño de fuente en el pie de página */
+    }
 }
